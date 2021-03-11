@@ -1,8 +1,4 @@
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 const app = (function(){
     let author;
     let bluePrint;
@@ -19,13 +15,13 @@ const app = (function(){
         if(author === ""){
             alert("Debe ingresar un nombre !");
         }else{
-            apimock.getBlueprintsByAuthor(author, (req, resp)=>{
+            apiclient.getBlueprintsByAuthor(author, (req, resp)=>{
                 
             });
         }
     }
     
-    function parceroData(data){
+    function añadirData(data){
         $("#blueprintsTable tbody").empty();
         
         if(data === undefined){
@@ -52,12 +48,12 @@ const app = (function(){
     function getBlueprintByAuthorAndName(data) {
         author = $("#author").val();
         blueprintName = data.id;
-        apimock.getBlueprintsByNameAndAuthor(blueprintName, author, (req, resp) => {
-            pintaparcero(resp);
+        apiclient.getBlueprintsByNameAndAuthor(blueprintName, author, (req, resp) => {
+            pintaData(resp);
         });
     }
 
-    function pintaparcero(data) {
+    function pintarData(data) {
         getBluePrintName();
         const puntos = data.points;
         var c = document.getElementById("myCanvas");
