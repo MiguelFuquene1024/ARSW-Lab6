@@ -53,6 +53,75 @@ var apimock = (function () {
             ]
         }
     ]
+    
+    mockdata['MiguelFuquene'] = [
+        {
+            author: 'MiguelFuquene',
+            name: 'plano1',
+            points: [
+                {
+                    x: 50,
+                    y: 70
+                },
+                {
+                    x: 70,
+                    y: 65
+                },
+                {
+                    x: 80,
+                    y: 90
+                },
+            ]
+        }
+    ]
+    mockdata['JavierLopez'] = [
+        {
+            author: 'JavierLopez',
+            name: 'plano2',
+            points: [
+                {
+                    x: 10,
+                    y: 90
+                },
+                {
+                    x: 70,
+                    y: 30
+                },
+                {
+                    x: 30,
+                    y: 20
+                },
+            ]
+        }
+    ]
+    mockdata['ArmandoCasillas'] = [
+        {
+            author: 'ArmandoCasillas',
+            name: 'plano3',
+            points: [
+                {
+                    x: 80,
+                    y: 90
+                },
+                {
+                    x: 15,
+                    y: 45
+                },
+                {
+                    x: 90,
+                    y: 50
+                },
+                {
+                    x: 80,
+                    y: 70
+                },
+                {
+                    x: 40,
+                    y: 95
+                },
+            ]
+        }
+    ]
 
     return {
         getBlueprintsByAuthor: function(author, callback) {

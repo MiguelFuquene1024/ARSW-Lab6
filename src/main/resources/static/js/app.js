@@ -15,7 +15,7 @@ const app = (function(){
         if(author === ""){
             alert("Debe ingresar un nombre !");
         }else{
-            apiclient.getBlueprintsByAuthor(author, (req, resp)=>{
+            apimock.getBlueprintsByAuthor(author, (req, resp)=>{
                 
             });
         }
@@ -25,7 +25,7 @@ const app = (function(){
         $("#blueprintsTable tbody").empty();
         
         if(data === undefined){
-            alert("No existe el autor!");
+            alert("No existe este autor ni su blueprint");
             $("#nombreAutor").empty();
             $("#userPoints").empty();
         }else{
@@ -37,7 +37,7 @@ const app = (function(){
                 }
             });
             datanew.map((elementos)=>{
-                $("#blueprintsTable > tbody:last").append($("<tr><td>" +elementos.name + "</td><td>" + elementos.puntos.toString() + "</td><td>" + "<button id=" + elementos.name + " onclick=app.getBlueprintByAuthorAndName(this)>open</button>" + "</td>"));
+                $("#blueprintsTable > tablebody:last").append($("<tr><td>" +elementos.name + "</td><td>" + elementos.puntos.toString() + "</td><td>" + "<button id=" + elementos.name + " onclick=app.getBlueprintByAuthorAndName(this)>open</button>" + "</td>"));
             });
             
             const puntosTotales = datanew.reduce((suma,{puntos})=> suma + puntos,0);
@@ -48,7 +48,7 @@ const app = (function(){
     function getBlueprintByAuthorAndName(data) {
         author = $("#author").val();
         blueprintName = data.id;
-        apiclient.getBlueprintsByNameAndAuthor(blueprintName, author, (req, resp) => {
+        apimock.getBlueprintsByNameAndAuthor(blueprintName, author, (req, resp) => {
             pintaData(resp);
         });
     }
@@ -56,7 +56,7 @@ const app = (function(){
     function pintarData(data) {
         getBluePrintName();
         const puntos = data.points;
-        var c = document.getElementById("myCanvas");
+        var c = document.getElementById("Canvas");
         var c2d= c.getContext("2d");
         c2d.clearRect(0, 0, c.width, c.height);
         c2d.restore();
