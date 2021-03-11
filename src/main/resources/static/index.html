@@ -26,7 +26,7 @@ and open the template in the editor.
         <div class="UpperContainer">
             <p><b>Author</b></p>
             <input id="author" placeholder="JhonConnor" type="text">
-            <button onclick="app.getAuthorBlueprints()">Get blueprints</button>>
+            <button onclick="app.getAuthorBlueprints()">Get blueprints</button>
         </div>
         
         <div class="PrincipalContainer">
@@ -35,7 +35,16 @@ and open the template in the editor.
         
         <div class="contenedorTable">
             <table class="blueprintsTable" id="blueprintsTable">
-                
+                <thead>
+                    <tr>
+                        <th>Blueprint name</th>
+                        <th>Number of points</th>
+                        <th>Open</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>          
             </table>
             <a class="userPoints" id="userPoints">Total user points:</a>
             <a class="numberUserPoints" id="numberUserPoints">0</a>
