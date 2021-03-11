@@ -25,6 +25,8 @@
         compile group: 'org.webjars', name: 'jquery', version: '3.1.0'
     }               
     ```
+![](https://github.com/MiguelFuquene1024/ARSW-Lab6/blob/master/img/lab06/dependencias.png)
+
 
 ## Front-End - Vistas
 
@@ -48,6 +50,8 @@
         <link rel="stylesheet"
           href="/webjars/bootstrap/4.1.2/css/bootstrap.min.css" />
     ```
+
+![](https://github.com/MiguelFuquene1024/ARSW-Lab6/blob/master/img/lab06/index.png)
 
 
 5. Suba la aplicación (mvn spring-boot:run), y rectifique:
