@@ -14,8 +14,38 @@ and open the template in the editor.
         <script src="/webjars/bootstrap/4.1.2/js/bootstrap.min.js"></script>
         <link rel="stylesheet"
           href="/webjars/bootstrap/4.1.2/css/bootstrap.min.css" />
+        <script src="js/apimock.js"></script>
+        <script src="js/app.js"></script>
     </head>
     <body>
-        <div>TODO write content</div>
+        <header>
+            <nav>
+                <h1>Blueprints</h1>
+            </nav>
+        </header>
+        <div class="UpperContainer">
+            <p><b>Author</b></p>
+            <input id="author" placeholder="JhonConnor" type="text">
+            <button onclick="app.getAuthorBlueprints()">Get blueprints</button>>
+        </div>
+        
+        <div class="PrincipalContainer">
+            <a class="nombreAutor" id="nombreAutor">Blueprints:</a>
+        </div>   
+        
+        <div class="contenedorTable">
+            <table class="blueprintsTable" id="blueprintsTable">
+                
+            </table>
+            <a class="userPoints" id="userPoints">Total user points:</a>
+            <a class="numberUserPoints" id="numberUserPoints">0</a>
+        </div>
+        
+        <div class="contenedorderecho">
+            <div class="contderechoname">
+                <a class="nombreActual" id="nombreActual">Current blueprint:</a>
+            </div>
+            <canvas id="myCanvas"></canvas>
+        </div>
     </body>
 </html>
