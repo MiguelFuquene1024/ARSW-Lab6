@@ -57,11 +57,15 @@
     ```
     2. Al abrir la consola de desarrollador del navegador, NO deben aparecer mensajes de error 404 (es decir, que las librerías de JavaScript se cargaron correctamente).
 
+![](https://github.com/MiguelFuquene1024/ARSW-Lab6/blob/master/img/lab06/vistablueprints.png)
+
 ## Front-End - Lógica
 
 1. Ahora, va a crear un Módulo JavaScript que, a manera de controlador, mantenga los estados y ofrezca las operaciones requeridas por la vista. Para esto tenga en cuenta el [patrón Módulo de JavaScript](https://toddmotto.com/mastering-the-module-pattern/), y cree un módulo en la ruta static/js/app.js .
 
 2. Copie el módulo provisto (apimock.js) en la misma ruta del módulo antes creado. En éste agréguele más planos (con más puntos) a los autores 'quemados' en el código.
+
+![](https://github.com/MiguelFuquene1024/ARSW-Lab6/blob/master/img/lab06/autoresypuntos.png)
 
 3. Agregue la importación de los dos nuevos módulos a la página HTML (después de las importaciones de las librerías de jQuery y Bootstrap):
     ```html
@@ -82,6 +86,8 @@
 
     * Sobre el listado resultante, haga otro 'map', que tome cada uno de estos elementos, y a través de jQuery agregue un elemento \<tr\> (con los respectvos \<td\>) a la tabla creada en el punto 4. Tenga en cuenta los [selectores de jQuery](https://www.w3schools.com/JQuery/jquery_ref_selectors.asp) y [los tutoriales disponibles en línea](https://www.tutorialrepublic.com/codelab.php?topic=faq&file=jquery-append-and-remove-table-row-dynamically). Por ahora no agregue botones a las filas generadas.
 
+![](https://github.com/MiguelFuquene1024/ARSW-Lab6/blob/master/img/lab06/a%C3%B1adirdata.png)
+
     * Sobre cualquiera de los dos listados (el original, o el transformado mediante 'map'), aplique un 'reduce' que calcule el número de puntos. Con este valor, use jQuery para actualizar el campo correspondiente dentro del DOM.
 
 5. Asocie la operación antes creada (la de app.js) al evento 'on-click' del botón de consulta de la página.
@@ -100,6 +106,8 @@
 11. Verifique que la aplicación ahora permita: consultar los planos de un auto y graficar aquel que se seleccione.
 
 12. Una vez funcione la aplicación (sólo front-end), haga un módulo (llámelo 'apiclient') que tenga las mismas operaciones del 'apimock', pero que para las mismas use datos reales consultados del API REST. Para lo anterior revise [cómo hacer peticiones GET con jQuery](https://api.jquery.com/jquery.get/), y cómo se maneja el esquema de _callbacks_ en este contexto.
+
+![](https://github.com/MiguelFuquene1024/ARSW-Lab6/blob/master/img/lab06/apiclient.png)
 
 13. Modifique el código de app.js de manera que sea posible cambiar entre el 'apimock' y el 'apiclient' con sólo una línea de código.
 
